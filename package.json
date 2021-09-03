@@ -2,7 +2,10 @@
     "private":"true",
     "name": "send-sms",
     "workspaces":[
-        "app/server",
-        "app/frontend"
-    ]
+        "app/frontend",
+        "app/server"        
+    ],
+    "scripts": {
+        "start": "yarn workspaces run start"
+    }
 }
