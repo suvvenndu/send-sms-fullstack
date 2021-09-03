@@ -1,0 +1,8 @@
+{
+    "private":"true",
+    "name": "send-sms",
+    "workspaces":[
+        "app/server",
+        "app/frontend"
+    ]
+}
