@@ -4,7 +4,7 @@
 find /usr/share/nginx/html -exec touch {} +
 
 # build the front end config file
-source config.json.sh YOUR_PREFIX
+#source config.json.sh YOUR_PREFIX
 
 #copy correct scopes for current run env to the doc root
 
