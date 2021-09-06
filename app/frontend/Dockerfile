@@ -18,9 +18,9 @@ ADD ./nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80 443
 
 COPY ./build/ /usr/share/nginx/html
-COPY ./scripts/launch.sh /
-COPY ./scripts/config.json.sh /
+# COPY ./scripts/launch.sh /
+# COPY ./scripts/config.json.sh /
 
-STOPSIGNAL SIGTERM
+#STOPSIGNAL SIGTERM
 
-#CMD ["/launch.sh"]
+#CMD ["chmod", "+x", "/launch.sh"]
