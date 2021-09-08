@@ -1,10 +1,16 @@
 FROM node
 
-WORKDIR /home/node/app
+# WORKDIR /home/node/app
+
+# ENV NODE_ENV=production
+
+# COPY ./build/ ./server
+
+ENV YARN_VERSION 1.15.2
 
 ENV NODE_ENV=production
 
-COPY ./build/ ./server
+COPY ./build ./server
 
 EXPOSE 5000
 
