@@ -24,7 +24,7 @@ var jwtCheck = jwt({
 //Elese you will get an error secure need to set to true
 app.use(
   session({
-    secret: "1355d63f-152e-49c8-8a88-cd244359c250",
+    secret: process.env.SESSION_SECRET,
     cookie: {
       httpOnly: true,
       //secure: true,
