@@ -20,7 +20,7 @@ var jwtCheck = jwt({
   algorithms: ["RS256"],
 });
 
-//These guys are required when working on docker container
+//Setting session is required for some reason when working on docker container
 //Elese you will get an error secure need to set to true
 app.use(
   session({
