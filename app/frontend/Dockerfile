@@ -23,3 +23,5 @@ COPY ./build/ /usr/share/nginx/html
 #STOPSIGNAL SIGTERM
 
 #CMD ["chmod", "+x", "/launch.sh"]
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
