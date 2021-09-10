@@ -3,3 +3,5 @@ node_modules
 .env
 .DS_Store
 app/build/server/server.bundle.js
+app/frontend/nginx.backup.conf
+.gitignore
