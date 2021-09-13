@@ -1,12 +1,15 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const app = express();
+var cors = require("cors");
 require("dotenv").config();
 const jwt = require("express-jwt");
 const jwks = require("jwks-rsa");
 const session = require("express-session");
 
 var AWS = require("aws-sdk");
+
+app.use(cors());
 
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
