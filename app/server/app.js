@@ -16,10 +16,10 @@ var jwtCheck = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: process.env.AUTH0_JWKS_URI,
+    jwksUri: "https://dev-0l6ybcat.us.auth0.com/.well-known/jwks.json",
   }),
-  audience: process.env.AUTH0_AUDIENCE,
-  issuer: process.env.AUTH0_ISSUER,
+  audience: "https://3sharp/text",
+  issuer: "https://dev-0l6ybcat.us.auth0.com/",
   algorithms: ["RS256"],
 });
 
@@ -27,7 +27,7 @@ var jwtCheck = jwt({
 //Elese you will get an error secure need to set to true
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: "1355d63f-152e-49c8-8a88-cd244359c250",
     cookie: {
       httpOnly: true,
       //secure: true,
