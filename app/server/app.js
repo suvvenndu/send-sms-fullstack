@@ -35,7 +35,7 @@ app.use(
     },
   })
 );
-app.use(jwtCheck);
+//app.use(jwtCheck);
 app.use(bodyparser.json());
 
 if (app.get("env") === "production") {
@@ -45,7 +45,11 @@ if (app.get("env") === "production") {
   // app.set('trust proxy', 1);
 }
 
-app.post("/text", (req, res) => {
+app.get("/", (req, response) => {
+  response.send(`success`);
+});
+
+app.post("/text", jwtCheck, (req, res) => {
   console.log("Req", req.body);
 
   var params = {
